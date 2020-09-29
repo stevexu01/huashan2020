@@ -235,3 +235,84 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [protractor]: https://angular.github.io/protractor/
 [leaflet]: https://leafletjs.com/
 [definitelytyped]: https://definitelytyped.org/
+
+
+## API access:
+** copy token from browser after login.
+
+** call api with token:
+$ curl -X GET "http://localhost:7070/api/users" -H "accept: */*" -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTYwMTQ3OTg0N30.DvPnT7hrwHKR4y9VrgbbXGrW7HjbslA5HGrMggDzvM_M26ZEECo2_Ypt-A7bXl9kKXhrLh0TOgJEmwui_TNOJw"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  2040    0  2040    0     0   2040      0 --:--:-- --:--:-- --:--:-- 32903[ {
+  "id" : "user-2",
+  "login" : "admin",
+  "firstName" : "admin",
+  "lastName" : "Administrator",
+  "email" : "admin@localhost",
+  "imageUrl" : null,
+  "activated" : true,
+  "langKey" : "en",
+  "createdBy" : "system",
+  "createdDate" : "2020-09-18T03:29:53.896Z",
+  "lastModifiedBy" : "system",
+  "lastModifiedDate" : "2020-09-18T03:29:53.898Z",
+  "authorities" : [ "ROLE_USER", "ROLE_ADMIN" ]
+}, {
+  "id" : "5f642a417a2355589cb9dfa7",
+  "login" : "steve",
+  "firstName" : null,
+  "lastName" : null,
+  "email" : "stevexu10@gmail.com",
+  "imageUrl" : null,
+  "activated" : false,
+  "langKey" : "en",
+  "createdBy" : "anonymousUser",
+  "createdDate" : "2020-09-18T03:32:17.674Z",
+  "lastModifiedBy" : "anonymousUser",
+  "lastModifiedDate" : "2020-09-18T03:32:17.674Z",
+  "authorities" : [ "ROLE_USER" ]
+}, {
+  "id" : "5f642a417a2355589cb9dfa8",
+  "login" : "steve",
+  "firstName" : null,
+  "lastName" : null,
+  "email" : "stevexu10@gmail.com",
+  "imageUrl" : null,
+  "activated" : false,
+  "langKey" : "en",
+  "createdBy" : "anonymousUser",
+  "createdDate" : "2020-09-18T03:32:17.675Z",
+  "lastModifiedBy" : "anonymousUser",
+  "lastModifiedDate" : "2020-09-18T03:32:17.675Z",
+  "authorities" : [ "ROLE_USER" ]
+}, {
+  "id" : "user-0",
+  "login" : "system",
+  "firstName" : "",
+  "lastName" : "System",
+  "email" : "system@localhost",
+  "imageUrl" : null,
+  "activated" : true,
+  "langKey" : "en",
+  "createdBy" : "system",
+  "createdDate" : "2020-09-18T03:29:53.661Z",
+  "lastModifiedBy" : "system",
+  "lastModifiedDate" : "2020-09-18T03:29:53.738Z",
+  "authorities" : [ "ROLE_USER", "ROLE_ADMIN" ]
+}, {
+  "id" : "user-3",
+  "login" : "user",
+  "firstName" : "",
+  "lastName" : "User",
+  "email" : "user@localhost",
+  "imageUrl" : null,
+  "activated" : true,
+  "langKey" : "en",
+  "createdBy" : "system",
+  "createdDate" : "2020-09-18T03:29:53.902Z",
+  "lastModifiedBy" : "system",
+  "lastModifiedDate" : "2020-09-18T03:29:53.903Z",
+  "authorities" : [ "ROLE_USER" ]
+} ]
+
