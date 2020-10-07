@@ -12,10 +12,10 @@ variables:
   azureSubscription: '0382ca50-d991-4dcd-839c-696a5756141f'
   
   # Web app name
-  webAppName: ''
+  webAppName: 'erics-2020'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'erics-2020'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
