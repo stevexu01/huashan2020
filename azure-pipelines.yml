@@ -31,9 +31,14 @@ stages:
     
     steps:
     - task: Maven@3
-      displayName: 'Maven Package'
       inputs:
-        mavenPomFile: 'pom.xml'
+      mavenPomFile: 'pom.xml'
+      mavenOptions: '-Xmx3072m'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.8'
+      jdkArchitectureOption: 'x64'
+      publishJUnitResults: false
+      goals: 'package'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
