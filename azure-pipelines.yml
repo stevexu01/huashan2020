@@ -1,11 +1,4 @@
 # Maven package Java project Web App to Linux on Azure
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Free Trial (a1c84db8-df36-4fc8-93b7-e1f3341bc283)'
-    appType: 'webAppLinux'
-    appName: 'erics-2020'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'JAVA|8-jre8'
 # Build your Java project and deploy it to Azure as a Linux web app
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -17,7 +10,15 @@ variables:
 
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '0382ca50-d991-4dcd-839c-696a5756141f'
-  
+  - task: AzureRmWebAppDeployment@4
+    inputs:
+      ConnectionType: 'AzureRM'
+      azureSubscription: 'Free Trial (a1c84db8-df36-4fc8-93b7-e1f3341bc283)'
+      appType: 'webAppLinux'
+      WebAppName: 'erics-2020'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
+      RuntimeStack: 'JAVA|8-jre8'
+      StartupCommand: 'java -jar $(System.DefaultWorkingDirectory)/target/huashan-2020-0.0.1-SNAPSHOT.jar'
   # Web app name
   webAppName: ''
 
